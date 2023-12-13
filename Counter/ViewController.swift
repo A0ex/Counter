@@ -9,13 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     private var clickCounter = 0
+    let feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     
     @IBOutlet weak var counterLabel: UILabel!
     
     @IBAction func counterButton(_ sender: Any) {
+        feedbackGenerator.impactOccurred()
         clickCounter += 1
         counterLabel.text = "Значение счётчика: \(clickCounter)"
-        print('\(clickCounter)')
     }
     override func viewDidLoad() {
         super.viewDidLoad()
