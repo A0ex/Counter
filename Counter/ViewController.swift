@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBAction func counterButton(_ sender: Any) {
         clickCounter += 1
         counterLabel.text = "Значение счётчика: \(clickCounter)"
+        print('\(clickCounter)')
     }
     override func viewDidLoad() {
         super.viewDidLoad()
