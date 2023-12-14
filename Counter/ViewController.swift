@@ -13,9 +13,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var counterLabel: UILabel!
     
-    @IBAction func counterButton(_ sender: Any) {
+    @IBAction func counterAddButton(_ sender: Any) {
         feedbackGenerator.impactOccurred()
         clickCounter += 1
+        counterLabel.text = "Значение счётчика: \(clickCounter)"
+    }
+    @IBAction func counterSubButton(_ sender: Any) {
+        feedbackGenerator.impactOccurred()
+        if clickCounter != 0 {
+            clickCounter -= 1
+            counterLabel.text = "Значение счётчика: \(clickCounter)"
+        }
+    }
+    
+    @IBAction func resetButton(_ sender: Any) {
+        feedbackGenerator.impactOccurred()
+        clickCounter = 0
         counterLabel.text = "Значение счётчика: \(clickCounter)"
     }
     override func viewDidLoad() {
