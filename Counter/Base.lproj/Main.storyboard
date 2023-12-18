@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,12 +65,21 @@
                                     <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axx-ai-m9s"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="История изменений:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MNC-6X-9BU">
+                                <rect key="frame" x="38" y="255" width="317" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="98w-A7-a5z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4eP-bR-mka"/>
                             <constraint firstItem="8sS-XD-d5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="7P8-c8-bie"/>
+                            <constraint firstItem="98w-A7-a5z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="DGc-lM-kca"/>
                             <constraint firstItem="W17-hD-5od" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="MSS-UR-F5H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8sS-XD-d5L" secondAttribute="bottom" constant="139" id="Thn-EQ-5Wq"/>
                             <constraint firstItem="zHL-Ay-FDY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZvS-vG-UJH"/>
@@ -81,6 +90,7 @@
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="98w-A7-a5z" id="SkQ-QI-ccq"/>
+                        <outlet property="infoTextView" destination="MNC-6X-9BU" id="pmL-Lz-ZvC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,6 +99,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
