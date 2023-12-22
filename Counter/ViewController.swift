@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     private var clickCounter = 0
-    let feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+    private let feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
     
-    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet private weak var counterLabel: UILabel!
     
-    @IBAction func counterAddButton(_ sender: Any) {
+    @IBAction private func counterAddButton(_ sender: Any) {
         feedbackGenerator.impactOccurred()
         let range = NSMakeRange(infoTextView.text.count - 1, 1)
         clickCounter += 1
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         
     }
-    @IBAction func counterSubButton(_ sender: Any) {
+    @IBAction private func counterSubButton(_ sender: Any) {
         feedbackGenerator.impactOccurred()
         let range = NSMakeRange(infoTextView.text.count - 1, 1)
         let currentDate = Date()
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func resetButton(_ sender: Any) {
+    @IBAction private func resetButton(_ sender: Any) {
         feedbackGenerator.impactOccurred()
         let range = NSMakeRange(infoTextView.text.count - 1, 1)
         clickCounter = 0
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         infoTextView.scrollRangeToVisible(range)
     }
     
-    @IBOutlet weak var infoTextView: UITextView!
+    @IBOutlet private weak var infoTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         infoTextView.isEditable = false
