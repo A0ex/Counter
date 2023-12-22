@@ -79,7 +79,6 @@
                         <constraints>
                             <constraint firstItem="98w-A7-a5z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4eP-bR-mka"/>
                             <constraint firstItem="8sS-XD-d5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="7P8-c8-bie"/>
-                            <constraint firstItem="98w-A7-a5z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="DGc-lM-kca"/>
                             <constraint firstItem="W17-hD-5od" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="MSS-UR-F5H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8sS-XD-d5L" secondAttribute="bottom" constant="139" id="Thn-EQ-5Wq"/>
                             <constraint firstItem="zHL-Ay-FDY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZvS-vG-UJH"/>
